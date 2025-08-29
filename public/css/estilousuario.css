@@ -1,0 +1,135 @@
+/* =========================
+   Estilos del módulo Usuario
+   ========================= */
+
+   .usuario-main{
+    background:#f9fafb;
+    padding:1.5rem;
+  }
+  
+  /* Encabezado */
+  .usuario-header h1{
+    font-size:1.875rem;
+    font-weight:700;
+    color:#1565c0;
+    margin-bottom:.5rem;
+  }
+  .usuario-header p{ color:#374151; }
+  
+  /* GRID principal */
+  .usuario-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    /* 🔑 evita que las columnas se estiren verticalmente */
+    align-items:start;
+  }
+  
+  @media (min-width:1024px){
+    .usuario-grid{
+      grid-template-columns:1fr 2fr;
+    }
+  }
+  
+  /* Tarjeta izquierda (perfil) — alto AUTO como antes */
+  .usuario-card{
+    background:#fff;
+    border-radius:1rem;
+    padding:1.5rem;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+    /* 🔑 NO estirar aunque la columna derecha sea más alta */
+    align-self:start;
+  }
+  
+  .usuario-card-content{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+  }
+  
+  .usuario-avatar{
+    font-size:4rem;
+    color:#4b5563;
+  }
+  
+  .usuario-card hr{
+    border:none;
+    border-top:1px solid #e5e7eb;
+    margin:1rem 0;
+  }
+  
+  .usuario-info{
+    font-size:.875rem;
+    color:#4b5563;
+  }
+  
+  /* Columna derecha (formularios apilados hacia abajo) */
+  .usuario-forms{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+  }
+  
+  .usuario-form-box{
+    background:#fff;
+    border-radius:1rem;
+    padding:1.5rem;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+  }
+  
+  .usuario-form-box h3{
+    font-size:1.125rem;
+    font-weight:600;
+    margin-bottom:1rem;
+    color:#0f172a;
+  }
+  
+  .usuario-form-box label{
+    display:block;
+    font-size:.875rem;
+    font-weight:500;
+    margin-bottom:.25rem;
+    color:#374151;
+  }
+  
+  .usuario-form-box input{
+    width:100%;
+    border:1px solid #d1d5db;
+    border-radius:.5rem;
+    padding:.5rem .75rem;
+    margin-bottom:1rem;
+    outline:none;
+  }
+  
+  .usuario-form-box input:focus{
+    border-color:#1565c0;
+    box-shadow:0 0 0 3px rgba(21,101,192,.12);
+  }
+  
+  /* Acciones */
+  .usuario-form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:.75rem;
+  }
+  
+  .btn-cancelar{
+    background:#f3f4f6;
+    color:#374151;
+    padding:.5rem 1rem;
+    border-radius:.75rem;
+    border:none;
+    cursor:pointer;
+  }
+  .btn-cancelar:hover{ background:#e5e7eb; }
+  
+  .btn-guardar{
+    background:linear-gradient(90deg,#2e7d32,#1565c0);
+    color:#fff;
+    padding:.5rem 1.25rem;
+    border-radius:.75rem;
+    border:none;
+    cursor:pointer;
+  }
+  .btn-guardar:hover{ opacity:.92; }
+  
